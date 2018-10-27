@@ -27,3 +27,6 @@ loadenv() {
   export $(cat $1 | grep -v "^#" | xargs)
   echo "Exported variables from $1"
 }
+
+# Configure alias for dotfiles repository
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
